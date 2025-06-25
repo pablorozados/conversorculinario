@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor Culinário</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <h1>Conversor Culinário</h1>
+  <nav>
+    <button class="tab-btn" data-tab="volume">Volume</button>
+    <button class="tab-btn" data-tab="massa">Massa/Peso</button>
+    <button class="tab-btn" data-tab="temperatura">Temperatura</button>
+    <button class="tab-btn" data-tab="utensilios">Utensílios</button>
+  </nav>
+
+  <section id="volume" class="tab">
+    <h2>Conversão de Volume</h2>
+    <input type="number" id="volume-value" placeholder="Valor">
+    <select id="volume-from">
+      <option value="ml">ml</option>
+      <option value="l">L</option>
+      <option value="oz">oz</option>
+      <option value="cup">xícara</option>
+      <option value="tbsp">colher sopa</option>
+      <option value="tsp">colher chá</option>
+      <option value="dl">dl</option>
+      <option value="floz">fl oz</option>
+    </select>
+    para
+    <select id="volume-to">
+      <option value="ml">ml</option>
+      <option value="l">L</option>
+      <option value="oz">oz</option>
+      <option value="cup">xícara</option>
+      <option value="tbsp">colher sopa</option>
+      <option value="tsp">colher chá</option>
+      <option value="dl">dl</option>
+      <option value="floz">fl oz</option>
+    </select>
+    <button onclick="convertVolume()">Converter</button>
+    <div id="volume-result"></div>
+  </section>
+
+  <section id="massa" class="tab" style="display:none;">
+    <h2>Conversão de Massa/Peso</h2>
+    <input type="number" id="massa-value" placeholder="Valor">
+    <select id="massa-from">
+      <option value="g">g</option>
+      <option value="kg">kg</option>
+      <option value="lb">lb</option>
+      <option value="oz">oz</option>
+    </select>
+    para
+    <select id="massa-to">
+      <option value="g">g</option>
+      <option value="kg">kg</option>
+      <option value="lb">lb</option>
+      <option value="oz">oz</option>
+    </select>
+    <button onclick="convertMassa()">Converter</button>
+    <div id="massa-result"></div>
+  </section>
+
+  <section id="temperatura" class="tab" style="display:none;">
+    <h2>Conversão de Temperatura</h2>
+    <input type="number" id="temp-value" placeholder="Valor">
+    <select id="temp-from">
+      <option value="c">°C</option>
+      <option value="f">°F</option>
+      <option value="k">K</option>
+    </select>
+    para
+    <select id="temp-to">
+      <option value="c">°C</option>
+      <option value="f">°F</option>
+      <option value="k">K</option>
+    </select>
+    <button onclick="convertTemp()">Converter</button>
+    <div id="temp-result"></div>
+  </section>
+
+  <section id="utensilios" class="tab" style="display:none;">
+    <h2>Conversão por Utensílios</h2>
+    <p>
+      <strong>Colher de sopa:</strong> 15 ml<br>
+      <strong>Colher de chá:</strong> 5 ml<br>
+      <strong>Xícara (padrão):</strong> 240 ml<br>
+      <strong>Copo americano:</strong> 200 ml<br>
+    </p>
+    <p>
+      <em>Esses valores são aproximados e podem variar conforme o ingrediente.</em>
+    </p>
+  </section>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
